@@ -17,25 +17,30 @@ void main() {
   students[2].phone = "0596412876";
   students[2].address = "Gaza";
 
-  print("All Students:");
+  print("🔹 All Students (Full Info):");
+  print("────────────────────────────");
   printStudents(students);
 
-  print("\nStudents with grade > 70:");
+  print("\n🔹 Students with Grade > 70:");
+  print("────────────────────────────");
   List<Student> highGrades = searchStudents(students, 70, true);
   printStudents(highGrades);
 
   students[2].email = "omar@gmail.com";
-  print("\nUpdated student:");
+  print("\n🔹 Updated Info for Omar:");
+  print("────────────────────────────");
   print(students[2]);
 
   students.sort((a, b) => b.grade.compareTo(a.grade));
-  print("\nStudents sorted by grade (high to low):");
+  print("\n🔹 Students Sorted by Grade (High to Low):");
+  print("──────────────────────────────────────────");
   printStudents(students);
 
-  print("\nStudents who passed:");
+  print("\n🔹 Students Who Passed (Grade ≥ 60):");
+  print("────────────────────────────────────");
   for (var s in students) {
     if (s.isPassed()) {
-      print(s.name);
+      print("- ${s.name} (Grade: ${s.grade})");
     }
   }
 }
