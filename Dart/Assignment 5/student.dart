@@ -10,7 +10,7 @@ class Student {
 
   Student(this._name, this._grade) : _id = _nextId++ {
     if (_grade < 0 || _grade > 100) {
-      throw ArgumentError("Grade must be between 0 and 100");
+      print("Grade must be between 0 and 100");
     }
   }
 
